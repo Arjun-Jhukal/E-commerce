@@ -14,6 +14,22 @@
     gap: 20px;
 
     > li {
+      &.close_dropdown {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        font-size: 24px;
+
+        &.active {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
       > a {
         text-transform: capitalize;
 
@@ -91,24 +107,6 @@
             visibility: visible;
             transform: translateY(0);
           }
-        }
-      }
-
-      &.close_dropdown {
-        position: absolute;
-        top: 50%;
-
-        transform: translateY(-50%);
-        right: 10px;
-        font-size: 20px;
-        cursor: pointer;
-        opacity: 0;
-        visibility: hidden;
-        font-size: 24px;
-
-        &.active {
-          opacity: 1;
-          visibility: visible;
         }
       }
     }

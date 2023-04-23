@@ -343,6 +343,23 @@ button.sign_in:hover {
   align-items: center;
   gap: 20px;
 }
+.header_wrapper > li.close_dropdown, .header_right > li.close_dropdown,
+.header .menu_items > li.close_dropdown {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 24px;
+}
+.header_wrapper > li.close_dropdown.active, .header_right > li.close_dropdown.active,
+.header .menu_items > li.close_dropdown.active {
+  opacity: 1;
+  visibility: visible;
+}
 .header_wrapper > li > a, .header_right > li > a,
 .header .menu_items > li > a {
   text-transform: capitalize;
@@ -419,23 +436,6 @@ button.sign_in:hover {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-}
-.header_wrapper > li.close_dropdown, .header_right > li.close_dropdown,
-.header .menu_items > li.close_dropdown {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 10px;
-  font-size: 20px;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  font-size: 24px;
-}
-.header_wrapper > li.close_dropdown.active, .header_right > li.close_dropdown.active,
-.header .menu_items > li.close_dropdown.active {
-  opacity: 1;
-  visibility: visible;
 }
 .header_wrapper button, .header_right button,
 .header .menu_items button {
