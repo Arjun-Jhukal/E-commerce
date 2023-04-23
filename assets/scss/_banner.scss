@@ -1,0 +1,113 @@
+.banner {
+  &_item {
+    overflow: hidden;
+    height: 710px;
+    // background-position: top right !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    &_1 {
+      background: url(../img/Banner/01.png), $white;
+    }
+
+    &_2 {
+      background: url(../img/Banner/02.jpg), $white;
+    }
+  }
+}
+
+@include responsive(xs) {
+  .banner {
+    .row {
+      align-items: flex-end !important;
+    }
+    &_item {
+      background-position: center right !important;
+      height: 800px;
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        content: "";
+        display: block;
+        height: 100%;
+        background: linear-gradient(to top, $orange, transparent);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+      }
+
+      &_2 {
+        background-color: left bottom !important;
+      }
+
+      &_detail {
+        padding-bottom: 50px;
+
+        h1,
+        p {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.banner_layout {
+  .banner_box {
+    // position: relative;
+    // z-index: 1;
+    overflow: hidden;
+
+    .banner_image {
+      height: 500px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &_content {
+      padding: 50px;
+      // position: absolute;
+      // top: 50%;
+      // transform: translateY(-50%);
+
+      // left: 10%;
+      // width: 35%;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .banner_layout {
+    .banner_box {
+      position: relative;
+      z-index: 1;
+
+      .banner_image {
+        height: 865px;
+      }
+
+      &_content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50%;
+      }
+    }
+  }
+
+  .banner_layout {
+    &.deal {
+      .banner_box {
+        &_content {
+          right: 0;
+        }
+      }
+    }
+  }
+}

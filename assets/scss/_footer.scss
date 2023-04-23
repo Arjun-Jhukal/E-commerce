@@ -1,0 +1,93 @@
+.footer {
+  background-color: $orange;
+  padding: 80px 0;
+
+  .footer_logo {
+    img {
+      width: 206px;
+      height: 76px;
+    }
+  }
+
+  p,
+  span,
+  a,
+  i {
+    color: $white;
+    font-size: 14px;
+  }
+
+  a {
+    color: $white;
+    &:hover {
+      color: $white;
+    }
+  }
+  i {
+    font-size: 20px;
+  }
+
+  li {
+    line-height: 2;
+  }
+
+  form {
+    border-bottom: 1px solid $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    input,
+    button {
+      border: none;
+      background-color: transparent;
+      padding: 10px 20px;
+      color: $white;
+
+      &::placeholder {
+        color: $white;
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  .copyright {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+
+    p {
+      display: inline-block;
+    }
+  }
+  .socials {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@include responsive(md) {
+  .footer {
+    .row {
+      & > div,
+      .head_office {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+// @media screen and (max-width: 600px) {
+//   .footer {
+//     .row {
+//       .col-sm_6 {
+//         width: 49%;
+//       }
+//     }
+//   }
+// }

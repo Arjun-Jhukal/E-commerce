@@ -1,0 +1,146 @@
+.product {
+  &_item {
+    margin-bottom: 30px;
+
+    &_image {
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      display: block;
+
+      img {
+        width: 100%;
+        height: 325px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      .hover_effect {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        background-color: #b3b3b370;
+        border-radius: 10px;
+        transform-origin: 0 0;
+        // transform: perspective(50px) rotateX(0deg);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-100%);
+        @include transition(0.5s);
+
+        button {
+          background-color: transparent;
+          border: none;
+        }
+        i {
+          font-size: 20px;
+          background-color: $orange;
+          color: $white;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          line-height: 40px;
+          text-align: center;
+        }
+      }
+    }
+
+    &_brief {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+      margin-top: 15px;
+
+      a,
+      span {
+        @include transition(0.3s);
+      }
+      del {
+        color: $slightly_black;
+      }
+
+      .color_row {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 5px;
+
+        a {
+          &:not(:last-child) {
+            &::after {
+              content: "\2f";
+              font-family: fontAwesome;
+              display: inline-block;
+              margin: 0 5px;
+            }
+          }
+
+          &:hover {
+            color: $orange;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      .product_item_image {
+        display: block;
+        .hover_effect {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+        }
+      }
+      span {
+        &.price {
+          &:not(:last-child) {
+            color: $orange;
+          }
+        }
+      }
+    }
+  }
+}
+.price {
+  &::before {
+    content: "RS";
+    display: inline-block;
+    margin-right: 8px;
+  }
+  &:not(:last-of-type) {
+    &::before {
+      margin-left: 8px;
+    }
+  }
+}
+@include responsive(md) {
+  .product {
+    &_item {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .row {
+    .col-xs-6 {
+      width: 49%;
+    }
+  }
+  .product {
+    &_item {
+      &_image {
+        .hover_effect {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

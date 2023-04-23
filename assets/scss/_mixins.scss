@@ -1,0 +1,53 @@
+@mixin transition($duration) {
+  transition: all $duration ease-in-out;
+}
+
+@mixin flex {
+  display: flex;
+  display: -ms-flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@mixin parabox($line) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin border($width, $color) {
+  border: $width solid $color;
+  border-top: $width solid $color;
+  border-bottom: $width solid $color;
+  border-left: $width solid $color;
+  border-right: $width solid $color;
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == xl {
+    @media only screen and (min-width: 1200px) and (max-width: 1500px) {
+      @content;
+    }
+  }
+  @if $breakpoint == lg {
+    @media (max-width: 1199px) {
+      @content;
+    }
+  }
+  @if $breakpoint == md {
+    @media (max-width: 991px) {
+      @content;
+    }
+  }
+  @if $breakpoint == xs {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+  @if $breakpoint == sm {
+    @media only screen and (min-width: 567px) and (max-width: 767px) {
+      @content;
+    }
+  }
+}
