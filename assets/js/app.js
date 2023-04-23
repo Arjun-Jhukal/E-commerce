@@ -1,6 +1,6 @@
 // Cart
 const cartIcon = document.querySelector("li.cart_icon");
-const cartBox = document.querySelector(".cart");
+const cartBox = document.querySelector(".side_cart");
 
 cartIcon.addEventListener("click", () => {
   cartBox.classList.add("active");
