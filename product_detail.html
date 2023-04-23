@@ -166,6 +166,10 @@
                 </ul>
               </li>
 
+              <li class="close_dropdown d-none d-lg-block">
+                <i class="fas fa-xmark"></i>
+              </li>
+
               <li class="d-lg-none"><a href="about.html" class="menu_link">About Us</a></li>
               <li class="d-lg-none"><a href="delivery.html" class="menu_link">Delivery Inforamation</a></li>
               <li class="d-lg-none"><a href="shipping.html" class="menu_link">Shipping & Exchange</a></li>
@@ -189,7 +193,7 @@
               <sup>2</sup>
             </li>
             <li>
-              <button><img src="./assets/img/Icons/03.png" alt="" /></button>
+              <button onclick="accountPage()"><img src="./assets/img/Icons/03.png" alt="" /></button>
             </li>
           </ul>
         </div>
@@ -334,6 +338,142 @@
       </div>
     </div>
 
+    <!-- May Like -->
+    <div class="product mb-80">
+      <div class="container">
+        <div class="section_title">
+          <h1 class="md_heading">You May Also Like</h1>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+            <div class="product_item">
+              <a href="#" class="product_item_image">
+                <img src="./assets/img/products/01.png" alt="" />
+
+                <div class="hover_effect">
+                  <button class="cart_box">
+                    <i class="fas fa-cart-shopping"></i>
+                  </button>
+                  <button class="view">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button class="wish">
+                    <i class="fas fa-heart"></i>
+                  </button>
+                </div>
+              </a>
+              <div class="product_item_brief">
+                <h1 class="sm_heading"><span class="brand">Chroma</span> Tie-Dye Tee</h1>
+                <div class="color_row">
+                  <a href="#">Black</a>
+                  <a href="#">White</a>
+                  <a href="#">Tan</a>
+                </div>
+                <div class="price_row">
+                  <span class="price">1100</span>
+                  <del class="price">1500</del>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+            <div class="product_item">
+              <a href="#" class="product_item_image">
+                <img src="./assets/img/products/02.png" alt="" />
+
+                <div class="hover_effect">
+                  <button class="cart_box">
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                  <button class="view">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button class="wish">
+                    <i class="fas fa-heart"></i>
+                  </button>
+                </div>
+              </a>
+              <div class="product_item_brief">
+                <h1 class="sm_heading"><span class="brand">Chroma</span> Heavy Sweatpants</h1>
+                <div class="color_row">
+                  <a href="#">Black</a>
+                  <a href="#">White</a>
+                  <a href="#">Tan</a>
+                </div>
+                <div class="price_row">
+                  <span class="price">1300</span>
+                  <!-- <del class="price">1500</del> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+            <div class="product_item">
+              <a href="#" class="product_item_image">
+                <img src="./assets/img/products/03.png" alt="" />
+
+                <div class="hover_effect">
+                  <button class="cart_box">
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                  <button class="view">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button class="wish">
+                    <i class="fas fa-heart"></i>
+                  </button>
+                </div>
+              </a>
+              <div class="product_item_brief">
+                <h1 class="sm_heading"><span class="brand">Chroma</span> Camp Shirt</h1>
+                <div class="color_row">
+                  <a href="#">Black</a>
+                  <a href="#">White</a>
+                  <a href="#">Grey</a>
+                  <a href="#">Red</a>
+                </div>
+                <div class="price_row">
+                  <span class="price">1900</span>
+                  <!-- <del class="price">1500</del> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+            <div class="product_item">
+              <a href="#" class="product_item_image">
+                <img src="./assets/img/products/04.png" alt="" />
+
+                <div class="hover_effect">
+                  <button class="cart_box">
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
+                  <button class="view">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button class="wish">
+                    <i class="fas fa-heart"></i>
+                  </button>
+                </div>
+              </a>
+              <div class="product_item_brief">
+                <h1 class="sm_heading"><span class="brand">Chroma</span> Tie-Dye Tee</h1>
+                <div class="color_row">
+                  <a href="#">Black</a>
+                  <a href="#">White</a>
+                  <a href="#">Tan</a>
+                </div>
+                <div class="price_row">
+                  <span class="price">1700</span>
+                  <del class="price">2200</del>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Cart -->
     <div class="cart side_cart">
       <div class="cart_btn">
@@ -405,7 +545,7 @@
           <span class="span_title">Total</span>
           <span class="price">3300 /-</span>
         </div>
-        <div class="checkout">
+        <div class="checkout" onclick="checkoutPage()">
           <button class="sign_in">Checkout</button>
         </div>
       </div>
@@ -448,7 +588,7 @@
             <ul>
               <li><a href="privacy.html">Privacy Policy</a></li>
               <li><a href="terms.html">Terms and Conditions</a></li>
-              <li><a href="checkout.html">Delivery Information</a></li>
+              <li><a href="delivery.html">Delivery Information</a></li>
               <li><a href="shipping.html">Shipping & Exchanges</a></li>
               <li><a href="product_list.html">Product List</a></li>
               <li><a href="product_detail.html">Product Details</a></li>
@@ -472,16 +612,16 @@
         <div class="copyright">
           <ul class="socials">
             <li>
-              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
             </li>
             <li>
-              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
             </li>
             <li>
-              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
             </li>
             <li>
-              <a href="#"><i class="fab fa-pinterest"></i></a>
+              <a href="https://www.pinterest.com/"><i class="fab fa-pinterest"></i></a>
             </li>
           </ul>
           <div class="copyright_msg">

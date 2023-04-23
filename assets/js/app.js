@@ -1,3 +1,10 @@
+function accountPage() {
+  location.replace("http://127.0.0.1:5500/Chroma%20Apparel/UX/login.html#");
+}
+function checkoutPage() {
+  location.replace("http://127.0.0.1:5500/Chroma%20Apparel/UX/checkout.html");
+}
+
 // Cart
 const cartIcon = document.querySelector("li.cart_icon");
 const cartBox = document.querySelector(".side_cart");
@@ -21,20 +28,36 @@ burgerIcon.addEventListener("click", () => {
 });
 
 const dropdowns = document.querySelectorAll(".dropdown");
+const headerLogo = document.querySelector(".header_logo");
+const headerRight = document.querySelector(".header_right");
+const closeDropdown = document.querySelector(".close_dropdown");
 
-// const removeActiveMenu = () => {
-//   return dropdowns.forEach((item) => {
-//     item.classList.remove("active");
-//   });
-// };
+const removeActiveMenu = () => {
+  return dropdowns.forEach((item) => {
+    item.classList.remove("active");
+  });
+};
 dropdowns.forEach((item) => {
   item.addEventListener("click", () => {
-    // removeActiveMenu();
-    item.classList.toggle("active");
+    removeActiveMenu();
+    item.classList.add("active");
+    closeDropdown.classList.add("active");
+    headerLogo.style.display = "none";
+    headerRight.style.display = "none";
+
+    closeDropdown.addEventListener("click", () => {
+      item.classList.remove("active");
+      headerLogo.style.display = "block";
+      headerRight.style.display = "flex";
+      closeDropdown.classList.remove("active");
+    });
   });
 });
+
 closeMenu.addEventListener("click", () => {
   nav.classList.remove("active");
+  headerLogo.style.display = "block";
+  headerRight.style.display = "flex";
 });
 
 $(".single-item").slick({
@@ -64,7 +87,7 @@ let calcScrollValue = () => {
 };
 window.onscroll = () => {
   calcScrollValue();
-  scrollFunction();
+  // scrollFunction();
 };
 window.onload = calcScrollValue;
 

@@ -166,6 +166,10 @@
                 </ul>
               </li>
 
+              <li class="close_dropdown d-none d-lg-block">
+                <i class="fas fa-xmark"></i>
+              </li>
+
               <li class="d-lg-none"><a href="about.html" class="menu_link">About Us</a></li>
               <li class="d-lg-none"><a href="delivery.html" class="menu_link">Delivery Inforamation</a></li>
               <li class="d-lg-none"><a href="shipping.html" class="menu_link">Shipping & Exchange</a></li>
@@ -189,7 +193,7 @@
               <sup>2</sup>
             </li>
             <li>
-              <button><img src="./assets/img/Icons/03.png" alt="" /></button>
+              <button onclick="accountPage()"><img src="./assets/img/Icons/03.png" alt="" /></button>
             </li>
           </ul>
         </div>
@@ -280,7 +284,7 @@
           <span class="span_title">Total</span>
           <span class="price">3300 /-</span>
         </div>
-        <div class="checkout">
+        <div class="checkout" onclick="checkoutPage()">
           <button class="sign_in">Checkout</button>
         </div>
       </div>
