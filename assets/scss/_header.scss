@@ -66,7 +66,7 @@
           justify-content: flex-start;
           gap: 80px;
           align-items: flex-start;
-          padding: 30px 100px;
+          padding: 30px 100px 80px;
 
           li {
             margin-top: 25px;
@@ -129,7 +129,8 @@
   }
   &_right {
     li {
-      button {
+      button,
+      a {
         width: 30px;
         height: 30px;
       }
@@ -194,12 +195,10 @@
     position: fixed;
     top: 0;
     left: 0;
-
     width: 100vw;
     height: 100%;
-
     z-index: 999;
-    background-color: #b3b3b3d1;
+    background-color: $white;
     overflow-y: scroll;
     overflow-x: hidden;
 
@@ -218,10 +217,10 @@
       width: 3px;
     }
     &::-webkit-scrollbar-track {
-      background-color: $slightly_black;
+      // background-color: $slightly_black;
     }
     &::-webkit-scrollbar-thumb {
-      background-color: $orange;
+      // background-color: $orange;
     }
 
     .menu_items {
@@ -229,7 +228,7 @@
       align-items: flex-start;
       justify-content: flex-start;
       background-color: $white;
-      padding: 100px 0 30px 30px;
+      padding: 120px 0 30px 170px;
       min-width: 250px;
       height: auto;
       margin: 0;
@@ -241,7 +240,8 @@
         }
         &.dropdown {
           ul {
-            padding-top: 20px;
+            padding: 0 0 0 20px;
+
             display: none;
 
             li {
@@ -278,12 +278,13 @@
       background-color: $white;
       // width: 250px;
       text-align: left;
-      top: 0;
-      left: 20px;
+      top: 54px;
+      left: 139px;
       font-size: 30px;
     }
   }
 }
+
 @media screen and (min-width: 992px) {
   .hamburger {
     display: none;

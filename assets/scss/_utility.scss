@@ -31,7 +31,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Oswald", sans-serif;
+  font-family: $font_family_1;
   font-weight: 700;
   margin-bottom: 0.3em;
 }
@@ -125,7 +125,7 @@ a:hover {
   &.register_btn {
     width: 100%;
     border-radius: 10px;
-    background-color: $black_2;
+    background-color: $black;
     overflow: hidden;
     // color: $black;
     text-align: center;
@@ -142,8 +142,9 @@ a:hover {
     text-align: center;
     width: 267px;
     height: 61px;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &::before {
       content: "";
@@ -151,6 +152,7 @@ a:hover {
       display: inline-block;
       margin-right: 8px;
       color: $white;
+      font-size: 28px;
     }
   }
 
@@ -203,16 +205,16 @@ textarea {
 button {
   &.sign_in {
     width: 100%;
-    @include border(1px, $orange);
+    @include border(1px, $black);
     border-radius: 10px;
     padding: 10px 0;
     background-color: transparent;
     @include transition(0.5s);
 
     &:hover {
-      background-color: $orange;
+      background-color: $black;
       color: $white;
-      border-color: $orange;
+      border-color: $black;
     }
   }
 }
@@ -322,4 +324,17 @@ button {
 
 .mb-80 {
   margin-bottom: 80px;
+}
+
+.accordion-item {
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.accordion-button {
+  &:focus {
+    box-shadow: none;
+  }
+  &:not(.collapsed) {
+    background-color: $white;
+  }
 }

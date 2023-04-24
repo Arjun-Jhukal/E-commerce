@@ -32,13 +32,17 @@
   .banner_image {
     height: 615px !important;
   }
+  .banner_box_content {
+    left: auto;
+    right: -170px !important;
+  }
 }
 
 #countdown {
   width: 465px;
   height: 112px;
   text-align: left;
-  padding: 24px 0;
+  padding: 0 0 25px 0;
 
   #tiles > span {
     // width: 92px;

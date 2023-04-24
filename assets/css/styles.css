@@ -22,7 +22,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Oswald", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 700;
   margin-bottom: 0.3em;
 }
@@ -131,7 +131,7 @@ a:visited.register_btn,
 a:hover.register_btn {
   width: 100%;
   border-radius: 10px;
-  background-color: #1e1e1e;
+  background-color: #000;
   overflow: hidden;
   text-align: center;
 }
@@ -151,8 +151,9 @@ a:hover.apple {
   text-align: center;
   width: 267px;
   height: 61px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 a.google::before, a.apple::before,
 a:visited.google::before,
@@ -164,6 +165,7 @@ a:hover.apple::before {
   display: inline-block;
   margin-right: 8px;
   color: #fff;
+  font-size: 28px;
 }
 a.google::before,
 a:visited.google::before,
@@ -216,20 +218,20 @@ textarea {
 
 button.sign_in {
   width: 100%;
-  border: 1px solid #ff5733;
-  border-top: 1px solid #ff5733;
-  border-bottom: 1px solid #ff5733;
-  border-left: 1px solid #ff5733;
-  border-right: 1px solid #ff5733;
+  border: 1px solid #000;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
   border-radius: 10px;
   padding: 10px 0;
   background-color: transparent;
   transition: all 0.5s ease-in-out;
 }
 button.sign_in:hover {
-  background-color: #ff5733;
+  background-color: #000;
   color: #fff;
-  border-color: #ff5733;
+  border-color: #000;
 }
 
 .lg_heading {
@@ -330,6 +332,18 @@ button.sign_in:hover {
   margin-bottom: 80px;
 }
 
+.accordion-item {
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+  background-color: #fff;
+}
+
 .header {
   padding: 30px 0;
 }
@@ -398,7 +412,7 @@ button.sign_in:hover {
   justify-content: flex-start;
   gap: 80px;
   align-items: flex-start;
-  padding: 30px 100px;
+  padding: 30px 100px 80px;
 }
 .header_wrapper > li.dropdown > ul li, .header_right > li.dropdown > ul li,
 .header .menu_items > li.dropdown > ul li {
@@ -450,7 +464,8 @@ button.sign_in:hover {
 .header_wrapper {
   justify-content: space-between;
 }
-.header_right li button {
+.header_right li button,
+.header_right li a {
   width: 30px;
   height: 30px;
 }
@@ -510,7 +525,7 @@ button.sign_in:hover {
     width: 100vw;
     height: 100%;
     z-index: 999;
-    background-color: rgba(179, 179, 179, 0.8196078431);
+    background-color: #fff;
     overflow-y: scroll;
     overflow-x: hidden;
     opacity: 0;
@@ -526,18 +541,12 @@ button.sign_in:hover {
   .nav::-webkit-scrollbar {
     width: 3px;
   }
-  .nav::-webkit-scrollbar-track {
-    background-color: #b3b3b3;
-  }
-  .nav::-webkit-scrollbar-thumb {
-    background-color: #ff5733;
-  }
   .nav .menu_items {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     background-color: #fff;
-    padding: 100px 0 30px 30px;
+    padding: 120px 0 30px 170px;
     min-width: 250px;
     height: auto;
     margin: 0;
@@ -547,7 +556,7 @@ button.sign_in:hover {
     text-transform: uppercase;
   }
   .nav .menu_items > li.dropdown ul {
-    padding-top: 20px;
+    padding: 0 0 0 20px;
     display: none;
   }
   .nav .menu_items > li.dropdown ul li a {
@@ -576,8 +585,8 @@ button.sign_in:hover {
     position: fixed;
     background-color: #fff;
     text-align: left;
-    top: 0;
-    left: 20px;
+    top: 54px;
+    left: 139px;
     font-size: 30px;
   }
 }
@@ -726,6 +735,7 @@ button.sign_in:hover {
   .banner_layout .banner_box_content {
     position: absolute;
     top: 35%;
+    left: 5%;
     transform: translateY(-50%);
     width: 50%;
   }
@@ -905,12 +915,16 @@ button.sign_in:hover {
 .deal .banner_image {
   height: 615px !important;
 }
+.deal .banner_box_content {
+  left: auto;
+  right: -170px !important;
+}
 
 #countdown {
   width: 465px;
   height: 112px;
   text-align: left;
-  padding: 24px 0;
+  padding: 0 0 25px 0;
 }
 #countdown #tiles > span {
   font-size: 48px;
@@ -961,6 +975,9 @@ button.sign_in:hover {
 .footer li {
   line-height: 2;
 }
+.footer .newsletter {
+  margin-top: 45px;
+}
 .footer form {
   border-bottom: 1px solid #fff;
   display: flex;
@@ -971,7 +988,7 @@ button.sign_in:hover {
 .footer form button {
   border: none;
   background-color: transparent;
-  padding: 10px 20px;
+  padding: 0 0 10px 0;
   color: #fff;
 }
 .footer form input::-moz-placeholder, .footer form button::-moz-placeholder {
@@ -979,6 +996,7 @@ button.sign_in:hover {
   font-size: 12px;
   font-weight: 300;
   letter-spacing: 1px;
+  font-family: "Nunito", sans-serif;
 }
 .footer form input::placeholder,
 .footer form button::placeholder {
@@ -986,6 +1004,7 @@ button.sign_in:hover {
   font-size: 12px;
   font-weight: 300;
   letter-spacing: 1px;
+  font-family: "Nunito", sans-serif;
 }
 .footer .copyright {
   display: flex;
@@ -1209,7 +1228,7 @@ button.sign_in:hover {
 
 .cart {
   max-width: 450px;
-  padding: 30px 15px;
+  padding: 30px;
   background-color: #fff;
   height: 100%;
   overflow-y: scroll;
@@ -1229,12 +1248,6 @@ button.sign_in:hover {
 }
 .cart::-webkit-scrollbar {
   width: 3px;
-}
-.cart::-webkit-scrollbar-track {
-  background-color: #b3b3b3;
-}
-.cart::-webkit-scrollbar-thumb {
-  background-color: #ff5733;
 }
 .cart p {
   margin: 0;
@@ -1297,6 +1310,7 @@ button.sign_in:hover {
 .cart_summary .checkout .sign_in {
   background-color: #ff5733;
   color: #fff;
+  border-color: #ff5733;
 }
 .cart_summary .payment_options input {
   width: auto;

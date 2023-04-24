@@ -1,5 +1,5 @@
 function accountPage() {
-  location.replace("http://127.0.0.1:5500/Chroma%20Apparel/UX/login.html#");
+  location.replace("http://127.0.0.1:5500/login.html");
 }
 function checkoutPage() {
   location.replace("http://127.0.0.1:5500/Chroma%20Apparel/UX/checkout.html");
