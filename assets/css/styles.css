@@ -395,9 +395,10 @@ button.sign_in:hover {
   transform: translateY(10%);
   transition: all 0.5s ease-in-out;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 80px;
   align-items: flex-start;
-  padding: 50px 0;
+  padding: 50px 15px;
 }
 .header_wrapper > li.dropdown > ul li, .header_right > li.dropdown > ul li,
 .header .menu_items > li.dropdown > ul li {
@@ -586,7 +587,7 @@ button.sign_in:hover {
   }
 }
 .search_box {
-  background-color: #b3b3b3;
+  background-color: #fff;
   position: fixed;
   top: 0;
   left: 0;
@@ -610,12 +611,12 @@ button.sign_in:hover {
   position: absolute;
   top: 30px;
   right: 50px;
-  color: #fff;
+  color: #1e1e1e;
   font-size: 30px;
   cursor: pointer;
 }
 .search_box_wrapper form {
-  border-bottom: 1px solid #000;
+  border-bottom: 2px solid #000;
   width: 60%;
   display: flex;
   justify-content: space-between;
@@ -628,18 +629,18 @@ button.sign_in:hover {
 .search_box_wrapper form button {
   background-color: transparent;
   border: none;
-  color: #fff;
+  color: #1e1e1e;
   font-size: 24px;
   font-weight: 300;
 }
 .search_box_wrapper form input::-moz-placeholder, .search_box_wrapper form button::-moz-placeholder {
-  color: #fff;
+  color: #1e1e1e;
   font-size: 24px;
   font-weight: 300;
 }
 .search_box_wrapper form input::placeholder,
 .search_box_wrapper form button::placeholder {
-  color: #fff;
+  color: #1e1e1e;
   font-size: 24px;
   font-weight: 300;
 }
