@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  font-family: "Oswald", sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 h1,
@@ -401,7 +401,7 @@ button.sign_in:hover {
 }
 .header_wrapper > li.dropdown > ul li, .header_right > li.dropdown > ul li,
 .header .menu_items > li.dropdown > ul li {
-  line-height: 2;
+  margin-top: 25px;
 }
 .header_wrapper > li.dropdown > ul li a, .header_right > li.dropdown > ul li a,
 .header .menu_items > li.dropdown > ul li a {
@@ -442,7 +442,7 @@ button.sign_in:hover {
   background-color: transparent;
   border: none;
 }
-.header_logo {
+.header_logo a {
   min-width: 225px;
   height: 88px;
 }
@@ -710,6 +710,9 @@ button.sign_in:hover {
 .banner_layout .banner_box_content {
   padding: 50px;
 }
+.banner_layout .banner_box_content p {
+  margin: 35px 0;
+}
 
 @media screen and (min-width: 768px) {
   .banner_layout .banner_box {
@@ -721,7 +724,7 @@ button.sign_in:hover {
   }
   .banner_layout .banner_box_content {
     position: absolute;
-    top: 50%;
+    top: 35%;
     transform: translateY(-50%);
     width: 50%;
   }

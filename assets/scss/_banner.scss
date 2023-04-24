@@ -79,6 +79,10 @@
 
       // left: 10%;
       // width: 35%;
+
+      p {
+        margin: 35px 0;
+      }
     }
   }
 }
@@ -94,7 +98,7 @@
 
       &_content {
         position: absolute;
-        top: 50%;
+        top: 35%;
         transform: translateY(-50%);
         width: 50%;
       }

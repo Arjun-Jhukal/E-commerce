@@ -68,7 +68,8 @@
           padding: 50px 0;
 
           li {
-            line-height: 2;
+            margin-top: 25px;
+
             a {
               text-transform: uppercase;
             }
@@ -117,8 +118,10 @@
     }
   }
   &_logo {
-    min-width: 225px;
-    height: 88px;
+    a {
+      min-width: 225px;
+      height: 88px;
+    }
   }
   &_wrapper {
     justify-content: space-between;
