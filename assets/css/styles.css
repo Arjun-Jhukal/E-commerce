@@ -385,8 +385,8 @@ button.sign_in:hover {
 .header_wrapper > li.dropdown > ul, .header_right > li.dropdown > ul,
 .header .menu_items > li.dropdown > ul {
   position: absolute;
-  left: 0;
-  right: 0;
+  left: -102px;
+  right: -102px;
   top: 100%;
   z-index: 999;
   background-color: #fff;
@@ -398,7 +398,7 @@ button.sign_in:hover {
   justify-content: flex-start;
   gap: 80px;
   align-items: flex-start;
-  padding: 50px 15px;
+  padding: 30px 100px;
 }
 .header_wrapper > li.dropdown > ul li, .header_right > li.dropdown > ul li,
 .header .menu_items > li.dropdown > ul li {
