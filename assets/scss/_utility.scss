@@ -31,7 +31,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font_family_1;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   margin-bottom: 0.3em;
 }
@@ -224,12 +224,15 @@ button {
   font-weight: 700;
   display: block;
   line-height: 1;
+  font-family: "Oswald", sans-serif;
 }
 .md_heading {
   font-size: $md_font;
+  font-family: "Oswald", sans-serif;
 }
 .sm_heading {
   font-size: $sm_font;
+  font-family: "Oswald", sans-serif;
 }
 .brand {
   text-transform: uppercase !important;
@@ -239,6 +242,7 @@ button {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+  font-family: "Oswald", sans-serif;
   h1 {
     text-transform: capitalize;
   }

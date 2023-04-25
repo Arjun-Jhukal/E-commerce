@@ -22,7 +22,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Nunito", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   margin-bottom: 0.3em;
 }
@@ -239,14 +239,17 @@ button.sign_in:hover {
   font-weight: 700;
   display: block;
   line-height: 1;
+  font-family: "Oswald", sans-serif;
 }
 
 .md_heading {
   font-size: 30px;
+  font-family: "Oswald", sans-serif;
 }
 
 .sm_heading {
   font-size: 16px;
+  font-family: "Oswald", sans-serif;
 }
 
 .brand {
@@ -258,6 +261,7 @@ button.sign_in:hover {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+  font-family: "Oswald", sans-serif;
 }
 .section_title h1 {
   text-transform: capitalize;
